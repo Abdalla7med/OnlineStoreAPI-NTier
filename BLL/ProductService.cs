@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OnlineStoreAPI;
 
 namespace BLL
 {
@@ -19,17 +20,31 @@ namespace BLL
             repository = _repository;
         }
 
-        public async Task AddAsync(Product product)
+        public async Task AddAsync(ProductCreateDto product)
         {
-            await repository.InsertAsync(product);
+            Product Product = new()
+            {
+                Name = product.Name,
+                Price = product.Price,
+                QuantityInStock = product.QuantityInStock
+            };
+
+            await repository.InsertAsync(Product);
+            await repository.SaveAsync();
         }
 
         public async Task DeleteAsync(int id)
         {
-            await repository.DeleteAsync(id);
+            var product = await repository.GetByIdAsync(id);
+
+            if(product == null)
+            {
+                throw new Exception("Not Found");
+            }
+            await repository.Delete(id);
         }
 
-        public async Task<IEnumerable<Product>> GetAll()
+        public async Task<IEnumerable<Product>> GetAllAsync()
         {
             return await repository.GetAllAsync();
         }
@@ -37,15 +52,25 @@ namespace BLL
         public async Task<Product> GetByIdAsync(int id)
         {
             var Entities = await repository.GetByIdAsync(id);
+
             return Entities;
         }
 
-        public async Task UpdateAsync(Product product)
+        public async Task UpdateAsync(int id, ProductUpdateDto updatedProduct)
         {
-            Product old = await repository.GetByIdAsync(product.Id);
-            if (this.Equals(old))
-                return;
-            await repository.UpdateAsync(product);
+            var product = await repository.GetByIdAsync(id);
+            if (product == null)
+            {
+                throw new Exception("Product not found");
+            }
+
+            // Update the product properties
+            product.QuantityInStock = updatedProduct.QuantityInStock;
+            product.Price = updatedProduct.Price;
+
+            // Save changes
+            await repository.Update(product);
+            await repository.SaveAsync();
         }
     }
 }

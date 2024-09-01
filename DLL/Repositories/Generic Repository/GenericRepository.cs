@@ -20,11 +20,17 @@ namespace DAL
         public async Task<IEnumerable<T> >GetAllAsync() => await _dbSet.ToListAsync();
         public async Task<T> GetByIdAsync(int id) => await _dbSet.FindAsync(id);
         public async Task InsertAsync(T entity) => await _dbSet.AddAsync(entity);
-        public async Task UpdateAsync(T entity) => _dbSet.Update(entity);
-        public async Task DeleteAsync(int id)
+        public async Task Update(T entity) => _dbSet.Update(entity);
+        public async Task Delete(int id)
         {
             var entity = await _dbSet.FindAsync(id);
              _dbSet.Remove(entity);
+        }
+
+
+        public async Task SaveAsync()
+        {
+            await _context.SaveChangesAsync();
         }
     }
 }

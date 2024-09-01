@@ -23,7 +23,8 @@ namespace BLL
 
         public async Task DeleteAsync(int id)
         {
-            await repository.DeleteAsync(id);
+
+            await repository.Delete(id);
         }
 
         public async Task<IEnumerable<Customer>> GetAll()

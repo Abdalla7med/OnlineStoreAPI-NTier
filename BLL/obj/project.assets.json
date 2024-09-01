@@ -987,6 +987,19 @@
           }
         }
       },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
       "DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -2754,6 +2767,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../OnlineStoreAPI/Common/Common.csproj",
+      "msbuildProject": "../OnlineStoreAPI/Common/Common.csproj"
+    },
     "DAL/1.0.0": {
       "type": "project",
       "path": "../DLL/DAL.csproj",
@@ -2762,6 +2780,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Common >= 1.0.0",
       "DAL >= 1.0.0"
     ]
   },
@@ -2801,6 +2820,9 @@
           "projectReferences": {
             "D:\\Back end\\DEPI\\API\\OnlineStoreAPI N-Tier\\DLL\\DAL.csproj": {
               "projectPath": "D:\\Back end\\DEPI\\API\\OnlineStoreAPI N-Tier\\DLL\\DAL.csproj"
+            },
+            "D:\\Back end\\DEPI\\API\\OnlineStoreAPI N-Tier\\OnlineStoreAPI\\Common\\Common.csproj": {
+              "projectPath": "D:\\Back end\\DEPI\\API\\OnlineStoreAPI N-Tier\\OnlineStoreAPI\\Common\\Common.csproj"
             }
           }
         }

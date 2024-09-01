@@ -16,10 +16,10 @@ namespace DAL
     /// Retrieve Customers: The system should allow retrieving customer profiles, including filtering by name, email, and registration date.
     /// Delete Customer: The system should allow for the removal of customer profiles.
     /// </summary>
-    public class CustomerRepositories : GenericRepository<Customer>
+    public class CustomerRepository : Repository<Customer>
     {
         /// Create Customer Repo
-        public CustomerRepositories(OnlineStoreContext context) : base(context)
+        public CustomerRepository(OnlineStoreContext context) : base(context)
         {
 
         }

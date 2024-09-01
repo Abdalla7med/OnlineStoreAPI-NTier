@@ -7,14 +7,23 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL;
+public enum OrderStatus
+{
+    Pending,
+    Processing,
+    Shipped,
+    Delivered,
+    Cancelled
+}
 
 [Index("CustomerId", Name = "IX_Orders_CustomerId")]
+
 public partial class Order
 {
     [Key]
     public int Id { get; set; }
 
-    public int CustomerId { get; set; }
+    public int? CustomerId { get; set; }
 
     public DateTime OrderDate { get; set; }
 

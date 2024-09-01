@@ -10,3 +10,4 @@ D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\BLL\obj\Debug\net8.0\BLL.dll
 D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\BLL\obj\Debug\net8.0\refint\BLL.dll
 D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\BLL\obj\Debug\net8.0\BLL.pdb
 D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\BLL\obj\Debug\net8.0\ref\BLL.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\BLL\obj\Debug\net8.0\BLL.csproj.AssemblyReference.cache
