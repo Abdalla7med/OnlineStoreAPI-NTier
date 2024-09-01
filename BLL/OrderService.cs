@@ -91,7 +91,7 @@ namespace BLL
                 if (product != null)
                 {
                     product.QuantityInStock -= orderDetail.Quantity;
-                    await productRepository.Update(product);
+                     productRepository.Update(product);
                     await productRepository.SaveAsync();
 
                 }
@@ -113,7 +113,7 @@ namespace BLL
                 throw new Exception("Order not Found");
             }
 
-            await repository.Delete(id);
+            repository.Delete(Order);
             await repository.SaveAsync();
         }
 
@@ -139,7 +139,7 @@ namespace BLL
 
             Order.Status =(int)updateorder.Status;
 
-            await repository.Update(Order);
+            repository.Update(Order);
             await repository.SaveAsync();
         }
     }

@@ -41,7 +41,8 @@ namespace BLL
             {
                 throw new Exception("Not Found");
             }
-            await repository.Delete(id);
+            
+            repository.Delete(product);
         }
 
         public async Task<IEnumerable<Product>> GetAllAsync()
@@ -69,7 +70,7 @@ namespace BLL
             product.Price = updatedProduct.Price;
 
             // Save changes
-            await repository.Update(product);
+            repository.Update(product);
             await repository.SaveAsync();
         }
     }

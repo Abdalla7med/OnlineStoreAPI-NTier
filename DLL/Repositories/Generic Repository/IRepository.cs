@@ -11,9 +11,9 @@ namespace DAL
     {
         Task<IEnumerable<T>> GetAllAsync();
         Task<T> GetByIdAsync(int id);
-        Task InsertAsync(T entity);
-        Task Update(T entity);
-        Task Delete(int id);
+        Task InsertAsync(T Entity);
+        void Update(T Entity);
+        void Delete(T Entity);
         Task SaveAsync();
         
     }
