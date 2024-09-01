@@ -1,0 +1,15 @@
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\bin\Debug\net8.0\DLL.deps.json
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\bin\Debug\net8.0\DLL.runtimeconfig.json
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\bin\Debug\net8.0\DLL.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\bin\Debug\net8.0\DLL.pdb
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\obj\Debug\net8.0\DLL.csproj.AssemblyReference.cache
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\obj\Debug\net8.0\DLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\obj\Debug\net8.0\DLL.AssemblyInfoInputs.cache
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\obj\Debug\net8.0\DLL.AssemblyInfo.cs
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\obj\Debug\net8.0\DLL.csproj.CoreCompileInputs.cache
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\obj\Debug\net8.0\DLL.sourcelink.json
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\obj\Debug\net8.0\DLL.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\obj\Debug\net8.0\refint\DLL.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\obj\Debug\net8.0\DLL.pdb
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\obj\Debug\net8.0\DLL.genruntimeconfig.cache
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\DLL\obj\Debug\net8.0\ref\DLL.dll
