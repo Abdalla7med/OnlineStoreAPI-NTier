@@ -2,12 +2,13 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL;
 
-public partial class OnlineStoreContext : DbContext
-{
+public partial class OnlineStoreContext : IdentityDbContext<ApplicationUser>
+    {
     public OnlineStoreContext(DbContextOptions<OnlineStoreContext> options)
         : base(options)
     {
@@ -23,10 +24,13 @@ public partial class OnlineStoreContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+       
         modelBuilder.Entity<Order>(entity =>
         {
             entity.Property(e => e.OrderDate).HasDefaultValueSql("(getdate())");
         });
+
+        base.OnModelCreating(modelBuilder);
 
         OnModelCreatingPartial(modelBuilder);
     }

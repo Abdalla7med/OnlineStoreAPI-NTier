@@ -20,8 +20,9 @@ namespace BLL
             repository = _repository;
         }
 
-        public async Task AddAsync(ProductCreateDto product)
+        public async Task<int> AddAsync(ProductCreateDto product)
         {
+            
             Product Product = new()
             {
                 Name = product.Name,
@@ -31,6 +32,8 @@ namespace BLL
 
             await repository.InsertAsync(Product);
             await repository.SaveAsync();
+
+            return Product.Id;
         }
 
         public async Task DeleteAsync(int id)
@@ -57,9 +60,20 @@ namespace BLL
             return Entities;
         }
 
+
+        public async Task<IEnumerable<Product>> GetByNameAsync(string Name)
+        {
+            IEnumerable<Product> Entities = await repository.GetAllAsync();
+
+            Entities = Entities.Where(p => p.Name == Name);
+
+            return Entities;
+        }
+
         public async Task UpdateAsync(int id, ProductUpdateDto updatedProduct)
         {
             var product = await repository.GetByIdAsync(id);
+
             if (product == null)
             {
                 throw new Exception("Product not found");

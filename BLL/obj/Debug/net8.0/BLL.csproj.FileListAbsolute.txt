@@ -11,3 +11,8 @@ D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\BLL\obj\Debug\net8.0\refint\BLL.dll
 D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\BLL\obj\Debug\net8.0\BLL.pdb
 D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\BLL\obj\Debug\net8.0\ref\BLL.dll
 D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\BLL\obj\Debug\net8.0\BLL.csproj.AssemblyReference.cache
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\BLL\bin\Debug\net8.0\Common.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\BLL\bin\Debug\net8.0\DAL.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\BLL\bin\Debug\net8.0\DAL.pdb
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\BLL\bin\Debug\net8.0\Common.pdb
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\BLL\obj\Debug\net8.0\BLL.csproj.Up2Date

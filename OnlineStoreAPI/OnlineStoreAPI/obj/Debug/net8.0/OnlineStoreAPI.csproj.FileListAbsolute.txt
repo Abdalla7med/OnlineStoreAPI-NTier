@@ -136,6 +136,15 @@ D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Deb
 D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\BLL.dll
-D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\DLL.dll
 D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\BLL.pdb
-D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\DLL.pdb
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\Common.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\DAL.dll
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\DAL.pdb
+D:\Back end\DEPI\API\OnlineStoreAPI N-Tier\OnlineStoreAPI\OnlineStoreAPI\bin\Debug\net8.0\Common.pdb
