@@ -18,7 +18,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\BLL\BLL.csproj" />
     <ProjectReference Include="..\..\DLL\DAL.csproj" />
-    <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 
 </Project>

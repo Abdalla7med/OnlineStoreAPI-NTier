@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\DLL\DAL.csproj" />
-    <ProjectReference Include="..\OnlineStoreAPI\Common\Common.csproj" />
   </ItemGroup>
 
 </Project>
