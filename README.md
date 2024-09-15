@@ -1,4 +1,3 @@
-Here’s a sample `README.md` file for your GitHub repository to describe your **NTier Online Store API** project. You can customize the sections as needed:
 
 ```markdown
 # Online Store API (NTier Architecture)
@@ -124,6 +123,7 @@ The project is divided into the following layers:
 ### Products
 - `GET /api/products`: Get all products.
 - `GET /api/products/{id}`: Get a product by ID.
+- `GET /api/products/{Name}`: Get a product by Name.
 - `POST /api/products`: Create a new product.
 - `PUT /api/products/{id}`: Update a product.
 - `DELETE /api/products/{id}`: Delete a product.
@@ -131,6 +131,7 @@ The project is divided into the following layers:
 ### Customers
 - `GET /api/customers`: Get all customers.
 - `GET /api/customers/{id}`: Get a customer by ID.
+- `GET /api/customers/{Nae}`: Get a customer by Name.
 - `POST /api/customers`: Create a new customer.
 - `PUT /api/customers/{id}`: Update a customer.
 - `DELETE /api/customers/{id}`: Delete a customer.
@@ -139,7 +140,8 @@ The project is divided into the following layers:
 - `GET /api/orders`: Get all orders.
 - `GET /api/orders/{id}`: Get an order by ID.
 - `POST /api/orders`: Create a new order.
-
+- `DELETE /api/orders`: Delete an Order.
+- `PUT /api/orders`: Update an Order.
 ---
 
 ## Future Enhancements
@@ -162,5 +164,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Update the **Project Structure** section with your actual folder structure if it differs.
 - Update the **Technologies Used** if you're using additional packages or tools.
 - Tailor the **API Endpoints** section based on your current endpoints and features.
-
-This `README.md` provides a detailed overview of your project and should help others understand and use your API effectively.
