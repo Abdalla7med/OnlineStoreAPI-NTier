@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace DAL
@@ -17,7 +18,14 @@ namespace DAL
             _dbSet = _context.Set<T>();
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync() => await _dbSet.ToListAsync();
+        /// <summary>
+        ///  To load Navigational Properties also
+        /// </summary>
+        /// <param name="includes"></param>
+        /// <returns></returns>
+        public async Task<IEnumerable<T>> GetAllAsync() =>  await _dbSet.ToListAsync();
+        
+
         public async Task<T> GetByIdAsync(int id) => await _dbSet.FindAsync(id);
         public async Task InsertAsync(T Entity) => await _dbSet.AddAsync(Entity);
         public void Update(T Entity) => _dbSet.Update(Entity);

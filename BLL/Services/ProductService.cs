@@ -19,7 +19,11 @@ namespace BLL
         {
             repository = _repository;
         }
-
+        /// <summary>
+        /// Adding Product, by mapping the Dto object to Product Object
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns></returns>
         public async Task<int> AddAsync(ProductCreateDto product)
         {
             
@@ -36,6 +40,12 @@ namespace BLL
             return Product.Id;
         }
 
+        /// <summary>
+        ///  Delete Product, and Throwing Exception InCase of Any Violation Occurs 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public async Task DeleteAsync(int id)
         {
             var product = await repository.GetByIdAsync(id);
@@ -48,16 +58,25 @@ namespace BLL
             repository.Delete(product);
         }
 
+        /// <summary>
+        ///  Get All Products 
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<Product>> GetAllAsync()
         {
             return await repository.GetAllAsync();
         }
 
+        /// <summary>
+        ///  Get Product By Id 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<Product> GetByIdAsync(int id)
         {
-            var Entities = await repository.GetByIdAsync(id);
+            var product = await repository.GetByIdAsync(id);
 
-            return Entities;
+            return product;
         }
 
 

@@ -24,7 +24,13 @@ namespace BLL
             productRepository = _productRepository;
         }
 
-        public async Task AddAsync(OrderCreateDTO orderDto)
+        /// <summary>
+        ///  Adding Order By Mapping Dto Object To The real Object 
+        /// </summary>
+        /// <param name="orderDto"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
+        public async Task<int> AddAsync(OrderCreateDTO orderDto)
         {
 
             var customer = await customerRepository.GetByIdAsync(orderDto.CustomerId ?? 0);
@@ -101,6 +107,8 @@ namespace BLL
             await repository.InsertAsync(order);
             await repository.SaveAsync();
 
+            return order.Id;
+
         }
 
         public async Task DeleteAsync(int id)
@@ -117,7 +125,7 @@ namespace BLL
             await repository.SaveAsync();
         }
 
-        public async Task<IEnumerable<Order>> GetAll()
+        public async Task<IEnumerable<Order>> GetAllAsync()
         {
             return await repository.GetAllAsync();
         }
@@ -137,10 +145,16 @@ namespace BLL
                 throw new Exception("Order not Found");
             }
 
-            Order.Status =(int)updateorder.Status;
+            Order.Status =(int) updateorder.Status;
+            try
+            {
+                repository.Update(Order);
+                await repository.SaveAsync();
 
-            repository.Update(Order);
-            await repository.SaveAsync();
+            }catch(Exception ex)
+            {
+                throw(ex); /// throwing this to the caller 
+            }
         }
     }
 }

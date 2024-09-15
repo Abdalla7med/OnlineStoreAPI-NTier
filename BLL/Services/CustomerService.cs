@@ -17,7 +17,7 @@ namespace BLL
             this.repository = repository;
         }
 
-        public async Task AddAsync(CustomerCreateDTO CustomerDto)
+        public async Task<int> AddAsync(CustomerCreateDTO CustomerDto)
         {
             Customer customer = new()
             {
@@ -29,6 +29,8 @@ namespace BLL
 
             await repository.InsertAsync(customer);
             await repository.SaveAsync();
+
+            return customer.Id;
         }
 
         public async Task DeleteAsync(int id)
@@ -55,6 +57,23 @@ namespace BLL
 
             return customer;
         }
+
+        public async Task<IEnumerable<Customer>> GetByNameAsync(string Name)
+        {
+            try
+            {
+                var Customers = await repository.GetAllAsync();
+
+                var CustomerByName = Customers.Where(C => C.Name == Name);
+
+                return CustomerByName;
+            }
+            catch(Exception ex)
+            {
+                throw (ex);
+            }
+        }
+
 
         public async Task UpdateAsync(int id, CustomerUpdateDTO customerDto)
         {

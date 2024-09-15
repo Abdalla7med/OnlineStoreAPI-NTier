@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace OnlineStoreAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/ProductManagement")]
     [ApiController]
     public class ProductController : ControllerBase
     {
@@ -53,24 +53,24 @@ namespace OnlineStoreAPI.Controllers
             return NotFound("Product not found");  // Use NotFound instead of BadRequest for missing resource
         }
 
-       /* [HttpGet("GetByName/{Name:alpha}")]
+        [HttpGet("GetByName/{Name:alpha}")]
         public async Task<IActionResult> GetProductByName(string Name)
         {
-            Product product;
+            IEnumerable<Product> products = new List<Product>();
             try
             {
-                product = await _productservice.GetByIdAsync(Name); // Handle exception from BLL
+                products = await _productservice.GetByNameAsync(Name); // Handle exception from BLL
             }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
 
-            if (product != null)
-                return Ok(product);
+            if (products != null)
+                return Ok(products);
 
             return NotFound("Product not found");  // Use NotFound instead of BadRequest for missing resource
-        }*/
+        }
 
         /*[HttpGet("{id}")]
         public async Task<IActionResult> GetProductById(int id)
@@ -143,6 +143,27 @@ namespace OnlineStoreAPI.Controllers
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, new { Status = "Error", Message = ex.Message });
+            }
+        }
+
+        /// <summary>
+        ///  Delete the Product using its id 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete("DeleteProduct/{id:int}")]
+        public async Task<IActionResult> DeleteProduct([FromRoute] int id)
+        {
+            try
+            {
+                await _productservice.DeleteAsync(id);
+
+                return Ok(value:"Product Deleted Successfully");
+
+            }catch(Exception Ex)
+            {
+
+                return BadRequest(error:Ex.Message);
             }
         }
 
